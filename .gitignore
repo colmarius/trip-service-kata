@@ -21,8 +21,13 @@ _NCrunch_*/
 #php netbeans
 php/nbproject/
 
+# Ruby
+ruby/vendor
+ruby/Gemfile.lock
+
 # JavaScript Ignores
 /javascript/node_modules
+/javascript/yarn.lock
 
 # Ignore Vim undo history
 *.un~
