@@ -57,9 +57,9 @@ class TripServiceTests < Test::Unit::TestCase
   end
 
   def test_logged_in_user_get_trips_for_no_user
-    # mock_logged_in_as(BOB)
-    # result = get_trip_by_user(NO_USER)
-    # assert_equal result, nil
+    mock_logged_in_as(BOB)
+    result = get_trip_by_user(NO_USER)
+    assert_equal [], result
   end
 
   def test_logged_in_user_with_no_trips

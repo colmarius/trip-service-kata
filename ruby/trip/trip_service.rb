@@ -13,7 +13,7 @@ class TripService
   def get_trip_by_user(user)
     logged_user = @session.get_logged_user
     raise UserNotLoggedInException unless logged_user
-
-    user.friend_of(logged_user) ? @trip_service.find_trips_by_user(user) : []
+    friends = user && user.friend_of(logged_user)
+    friends ? @trip_service.find_trips_by_user(user) : []
   end
 end
